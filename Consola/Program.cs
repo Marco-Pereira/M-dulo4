@@ -35,7 +35,10 @@ namespace Consola
             //Ficha7Solucao.Exercicio1_4();
             //Ficha7Solucao.Exercicio1_5();
             //Ficha7Solucao.Exercicio1_6();
-            Ficha7Solucao.Exercicio1_7();
+            //Ficha7Solucao.Exercicio1_7();
+            //Ficha7Solucao.Exercicio1_8();
+            //Ficha7Solucao.Exercicio1_9();
+            Ficha7Solucao.Exercicio1_10();
 
 
 

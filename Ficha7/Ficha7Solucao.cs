@@ -201,5 +201,71 @@ namespace Ficha7
             Console.WriteLine("Total = " + total);
         }
         #endregion
+
+        #region Exercicio1_8
+
+        public static void Exercicio1_8()
+        {
+            var count = 0;
+            double total = 0;
+            while (count < 5)
+            {
+               total = total + PedirProduto();
+                count++;
+            }
+            Console.WriteLine("Total dos produtos é " + total+ " EUR");
+        }
+
+        public static double PedirProduto() 
+        {
+            Console.WriteLine("Qual o nome do produto?");
+            string nump = Console.ReadLine();
+            Console.WriteLine("Qual o preço do produto?");
+            double precp = double.Parse(Console.ReadLine());
+            Console.WriteLine("Qual a quantidade do produto?");
+            double quantp = double.Parse(Console.ReadLine());
+            var totalP = precp * quantp;
+            Console.WriteLine("Valor total " + nump +" = "+ totalP+" EUR ");
+            return totalP;
+
+        }
+
+
+        #endregion
+
+        #region Exercicio1_9
+
+        public static void Exercicio1_9()
+        {
+            int nr = 0;
+            int total = 0;
+            int quantnr = 0;
+            Console.WriteLine("Qual o nr?");
+            nr = int.Parse(Console.ReadLine());
+            total = total + nr;
+            while (nr > 0)
+            {
+                
+                Console.WriteLine("Qual o nr?");
+                nr = int.Parse(Console.ReadLine());
+                total = total + nr;
+                quantnr++;
+            }
+            int media = total / quantnr;
+            Console.WriteLine("A media é " + media);
+
+        }
+
+        #endregion
+
+        #region Exercicio1_10
+
+        public static void Exercicio1_10()
+        {
+
+            mm
+        }
+
+        #endregion
     }
 }
