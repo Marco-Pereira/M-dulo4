@@ -263,9 +263,196 @@ namespace Ficha7
         public static void Exercicio1_10()
         {
 
-            mm
+            Console.WriteLine("Qual a operação que deseja realizar?" + "\n + \n - \n * \n / \n % ");
+            string oper = Console.ReadLine();
+            Console.WriteLine("Qual o primeiro nr?");
+            var nr1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Qual o segundo nr?");
+            var nr2 = double.Parse(Console.ReadLine());
+
+            switch (oper)
+            {
+                case "+":
+                    Console.WriteLine("= " + (nr1 + nr2));
+                    break;
+                case "-":
+                    Console.WriteLine("= " + (nr1 - nr2));
+                    break;
+                case "*":
+                    Console.WriteLine("= " + (nr1 * nr2));
+                    break;
+                case "/":
+                    Console.WriteLine("= " + (nr1 / nr2));
+                    break;
+                case "%":
+                    Console.WriteLine(nr1%nr2);
+                    break;
+                default:
+                    Console.WriteLine("Não é um operador");
+                    break;
+                                                                               
+            }
+
+
+
+
         }
 
         #endregion
+
+        #region Exercicio1_11
+
+        public static void Exercicio1_11()
+        {
+            Console.WriteLine("Qual o caracter?");
+            string car = Console.ReadLine();
+            var i = 0;
+
+            while (i < 3)
+            {
+                var j = 0;
+                while (j < 3)
+                {
+                    Console.Write(car);
+                    j++;
+                }
+                Console.Write("\n");
+                i++;
+            }
+
+
+        }
+
+        #endregion
+
+        #region Exercicio1_12
+
+        public static void Exercicio1_12()
+        {
+            Console.WriteLine("Qual o caracter?");
+            string car = Console.ReadLine();
+            Console.WriteLine("Qual o nr?");
+            var n = int.Parse(Console.ReadLine());
+            var i = 0;
+            
+            
+            while (i < n)
+            {
+                var j = 0;
+                while (j < n)
+                {
+                    Console.Write(car);
+                   
+                    j++;
+                }
+                Console.WriteLine("\n");
+                i++;
+            }
+            for (var k = 0; k < n; k++) 
+            {
+                for (var l = 0; l < n; l++) 
+                {
+                    Console.Write(car);
+                }
+                Console.WriteLine("\n");
+            }   
+
+
+        }
+
+
+        #endregion
+
+        #region Exercicio1_13
+
+        public static void Exercicio1_13()
+        {
+            Console.WriteLine("Qual o primeiro caracter?");
+            string car1 = Console.ReadLine();
+            Console.WriteLine("Qual o segundo caracter?");
+            string car2 = Console.ReadLine();
+            Console.WriteLine("Qual o primeiro número?");
+            var nr1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Qual o segundo número?");
+            var nr2 = double.Parse(Console.ReadLine());
+
+            
+            for (var l = 0; l < nr1; l++)
+            {
+                var pos = 2;
+                for (var c = 0; c < nr2; c++)
+                {
+                    if (pos % 2 == 0)
+                    {
+                        Console.Write(car1);
+                    }
+                    else
+                    {
+                        Console.Write(car2);
+                    }
+                    pos++;
+                }
+                Console.WriteLine("\n");
+
+            }
+
+
+        }
+        #endregion
+
+        #region ExercicioGII_1_1
+
+        public static void ExercicioGII_1()
+        
+        
+        {
+            Console.WriteLine("Introduza a temperatura");
+            var temp = double.Parse(Console.ReadLine());
+            var escala = "";
+
+            while (escala != "C" && escala != "K" && escala != "F")
+            {
+                Console.WriteLine("Em que escala? (C, K ou F");
+                escala = Console.ReadLine();
+            }
+            switch (escala)
+            {
+                case "C":
+                    Console.WriteLine(temp + " ºC é equivalente a " + (temp + 273.15) +
+                                        "ºK e " + (temp * 9 / 5 + 32) + "ºF");
+                break;
+                
+                case "K":
+                    Console.WriteLine(temp + " ºK é equivalente a " + (temp - 273.15) + " ºC e " + 
+                                        (temp * 9 / 5 - 459.67) + " ºF ");
+                break;
+
+                case "F":
+                    Console.WriteLine(temp + " ºF é equivalente a " + ((temp - 32) + 5 / 9) + 
+                        "ºC e " + ((temp + 459.67) * 5 / 9) + " ºK ");
+                break;
+
+                default: Console.WriteLine("Em que escala? (C, K ou F");
+                         escala = Console.ReadLine();
+                break;
+
+
+
+            }
+
+
+        }
+
+
+
+        #endregion
+
+        #region Calculadora
+
+
+
+
+        #endregion
+
     }
 }
